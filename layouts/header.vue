@@ -1,6 +1,5 @@
 <template>
   <header>
-    
     <searchbar class="center-box"/>
   </header>
 </template>
@@ -10,7 +9,8 @@ import searchbar from "~/components/searchbar"
 
 export default {
   components:{
-    searchbar
+    searchbar,
+    
   }
 }
 </script>
@@ -18,7 +18,10 @@ export default {
 <style>
 header{
   position:relative;
-  text-align: center;  
+  display: flex;
+  height:10% ;
+  justify-content: center;
+  align-items: center;
 }
 
 </style>

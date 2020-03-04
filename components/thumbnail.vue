@@ -16,10 +16,10 @@ export default {
     transWatchPage() {
       this.$store.dispatch(
         "getData",
-        "https://cryptic-basin-01283.herokuapp.com/current?num=10"
+        "https://fast-headland-23842.herokuapp.com/current?num=2"
       );
-      console.log(this.$store)
-      // console.log(this.$store.state.data);
+      location.href = "./watch"
+      console.log(this.$store.state.data)
     }
   }
 };

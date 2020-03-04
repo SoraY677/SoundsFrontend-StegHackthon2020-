@@ -19,10 +19,4 @@ export default {
 
 <style>
 
-.flex-row-block{
-  display: flex;
-  justify-content: space-between;
-  flex-flow: wrap;
-}
-
 </style>

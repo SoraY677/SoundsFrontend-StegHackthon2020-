@@ -1,5 +1,6 @@
 <template>
   <div class="frame">
+    <mmenu class="menu-layer"/>
     <mheader />
     <nuxt />
   </div>
@@ -27,8 +28,9 @@ html {
 }
 
 .frame{
+  position:relative;
   height:100vh;
-  width:100wh;
+  width:100vw;
 }
 
 main{
@@ -37,41 +39,24 @@ main{
   margin: 0 auto;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.menu-layer{
+  z-index:1;
+}
+.flex-row-block{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
 </style>
 
 <script>
 import mheader from "~/layouts/header"
+import mmenu from "~/layouts/menu"
 export default {
   components:{
-    mheader
+    mheader,
+    mmenu
   }
 }
 </script>
