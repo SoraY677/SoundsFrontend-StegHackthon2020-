@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="frame">
+    <mheader />
     <nuxt />
   </div>
 </template>
@@ -22,6 +23,18 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+  padding:0;
+}
+
+.frame{
+  height:100vh;
+  width:100wh;
+}
+
+main{
+  height:80%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .button--green {
@@ -53,3 +66,12 @@ html {
   background-color: #35495e;
 }
 </style>
+
+<script>
+import mheader from "~/layouts/header"
+export default {
+  components:{
+    mheader
+  }
+}
+</script>
