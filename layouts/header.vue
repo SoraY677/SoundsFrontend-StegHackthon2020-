@@ -1,23 +1,18 @@
 <template>
   <header>
-    <mmenu class="menu-layer"/>
     <logo />
     <searchbar class="search-bar-layout"/>
-    <auth class="auth-layout"/>
+    <a href="/user" class="icon-wrapper"></a>
   </header>
 </template>
 
 <script>
 import searchbar from "~/components/searchbar"
-import mmenu from "~/layouts/menu"
-import auth from "~/layouts/auth"
 import logo from "~/components/logo"
 
 export default {
   components:{
     searchbar,
-    mmenu,
-    auth,
     logo
   }
 }
@@ -37,11 +32,19 @@ header{
 }
 
 .search-bar-layout{
-  margin:0 20px;
+  margin:0 180px;
 }
 
 .auth-layout{
   float:right;
+}
+
+.icon-wrapper{
+  display: block;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  background-color:#eee;
 }
 
 </style>

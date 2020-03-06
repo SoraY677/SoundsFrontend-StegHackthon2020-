@@ -1,6 +1,6 @@
 <template>
   <div class="search-container">
-  <textarea ref="searchInput" class="search-input" placeholder="検索キーワードを入力"></textarea>
+  <input ref="searchInput" class="search-input" placeholder="検索キーワードを入力">
   <button class="search-bt" @click="transListPage()">検索</button>
   </div>
 </template>
@@ -28,14 +28,15 @@ export default {
     width:26em;
     height:100%;
     margin-right:10px;
+    font-size:1.2em;
   }
 
   button.search-bt{
     display: flex;
     height:100%;
-    padding:2px;
+    padding:2px 10px;
     color:white;
-
-    background-color:#0066FF;
+    background-color:#3AABD2;
+    border:none;
   }
 </style>

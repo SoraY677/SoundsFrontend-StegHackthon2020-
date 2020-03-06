@@ -1,11 +1,20 @@
 <template>
   <main>
+    <section class="file-reader-box">
+    <h2>音声データ</h2>
     <draganddrop :category="'sounds'" @sounds="setData($event, sound)" />
+    </section>
+    <section class="file-reader-box">
+    <h2>サムネイル画像</h2>
     <draganddrop
       :category="'thumbnail'"
       @thumbnail="setData($event, thumnail)"
     />
-    <textarea placeholder="タイトル"></textarea>
+    </section>
+    <section class="file-reader-box">
+    <h2>動画タイトル</h2>
+    <textarea class="long-input" placeholder="タイトル"></textarea>
+    </section>
     <button @click="requestRecord()">登録</button>
   </main>
 </template>
@@ -41,4 +50,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.long-input{
+  display: block;
+  height:2em;
+  width:80%;
+  margin:0 auto;
+  font-size:1.5em;
+}
+
+section.file-reader-box{
+  width:100%;
+  padding:20px;
+}
+</style>

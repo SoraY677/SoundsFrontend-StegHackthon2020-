@@ -1,5 +1,5 @@
 <template>
-  <div>hgeohgoe</div>
+  
 </template>
 
 <script>

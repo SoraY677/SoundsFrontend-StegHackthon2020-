@@ -40,7 +40,7 @@ p{
 main{
   height:90%;
   width: 100%;
-  padding:0 5%;
+  padding:20px 5% 0 5%;
   overflow-x: hidden;
   overflow-y: scroll;
 }

@@ -1,7 +1,6 @@
 <template>
   <a class=logo-layout href="/">
-    <img src="#">
-    
+    <img src="~/static/img/logo.png">
   </a>
 </template>
 
@@ -14,7 +13,6 @@ export default {
 <style>
   .logo-layout{
     height:100%;
-    width:30px;
   }
  .logo-layout > img{
    height:100%;
