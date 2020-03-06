@@ -1,6 +1,5 @@
 <template>
   <div class="frame">
-    <mmenu class="menu-layer"/>
     <mheader />
     <nuxt />
   </div>
@@ -31,17 +30,18 @@ html {
   position:relative;
   height:100vh;
   width:100vw;
+  overflow: hidden;
 }
 
 main{
-  height:80%;
-  width: 90%;
-  margin: 0 auto;
+  height:90%;
+  width: 100%;
+  padding:0 5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-.menu-layer{
-  z-index:1;
-}
+
 .flex-row-block{
   display: flex;
   justify-content: space-between;
@@ -52,11 +52,9 @@ main{
 
 <script>
 import mheader from "~/layouts/header"
-import mmenu from "~/layouts/menu"
 export default {
   components:{
-    mheader,
-    mmenu
+    mheader
   }
 }
 </script>

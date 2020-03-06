@@ -1,5 +1,5 @@
 <template>
-  <a :id="id" class="thumbnail-container" @click.prevent="transWatchPage()">
+  <a :id="id" class="thumbnail-container" @click.prevent="transWatchPage(id)">
     <div class="no-img">
       <p>サムネイルが存在しません</p>
     </div>
@@ -13,13 +13,13 @@
 export default {
   props: ["id", "thumbnailImg", "sound", "description"],
   methods: {
-    transWatchPage() {
-      this.$store.dispatch(
+    transWatchPage(id) {
+      
+      /*this.$store.dispatch(
         "getData",
         "https://fast-headland-23842.herokuapp.com/current?num=2"
-      );
-      location.href = "./watch"
-      console.log(this.$store.state.data)
+      );*/
+      location.href = "./watch?id="+id;
     }
   }
 };

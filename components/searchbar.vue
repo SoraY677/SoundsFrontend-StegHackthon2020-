@@ -10,7 +10,6 @@ export default {
   methods:{
     transListPage(){
       location.href ="/list"
-      console.log("hogehogeo")
     }
   }
 }
@@ -19,6 +18,7 @@ export default {
 <style>
 
   .search-container{
+    height:2em;
     display: inline-flex;
     flex-flow: wrap;
     justify-content: space-around;
@@ -26,13 +26,16 @@ export default {
   }
   textarea.search-input{
     width:26em;
-    height:2em;
+    height:100%;
     margin-right:10px;
   }
 
   button.search-bt{
-    padding:0.3em;
+    display: flex;
+    height:100%;
+    padding:2px;
     color:white;
+
     background-color:#0066FF;
   }
 </style>

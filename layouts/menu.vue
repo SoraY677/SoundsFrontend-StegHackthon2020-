@@ -40,7 +40,7 @@ export default {
 
 <style>
 nav{
-  position:absolute;
+  position:relative;
   top:10px;
   left:10px;
 }
@@ -75,6 +75,18 @@ nav{
 }
 .menu-trigger span:nth-of-type(3) {
   bottom: 0;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+.menu-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
 }
 
 .menu-list{
