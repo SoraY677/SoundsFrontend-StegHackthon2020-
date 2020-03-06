@@ -24,10 +24,10 @@ export default {
 <style>
 .thumbnail-container {
   display: block;
-  width: 30%;
-  min-width: 240px;
-  height: 40%;
-  min-height: 120px;
+  min-width:360px;
+  height:40vh;
+  margin:20px;
+  box-shadow: 2px 2px 5px 5px #eee;
 }
 
 .thumbnail-container > img {
@@ -37,6 +37,7 @@ export default {
   display: flex;
   width: 100%;
   height: 60%;
+  min-height:80px;
   overflow: hidden;
   justify-content: center;
   align-items: center;
