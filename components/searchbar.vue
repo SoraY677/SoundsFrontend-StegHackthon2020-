@@ -1,6 +1,6 @@
 <template>
   <div class="search-container">
-  <textarea class="search-input" placeholder="検索キーワードを入力"></textarea>
+  <textarea ref="searchInput" class="search-input" placeholder="検索キーワードを入力"></textarea>
   <button class="search-bt" @click="transListPage()">検索</button>
   </div>
 </template>
@@ -9,7 +9,7 @@
 export default {
   methods:{
     transListPage(){
-      location.href ="/list"
+      location.href ="/list?ward=" + this.$refs.searchInput.value
     }
   }
 }

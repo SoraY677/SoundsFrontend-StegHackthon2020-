@@ -1,7 +1,7 @@
 <template>
   <header>
     <mmenu class="menu-layer"/>
-    <searchbar class="center-box"/>
+    <searchbar class="search-bar-layout"/>
     <auth class="auth-layout"/>
   </header>
 </template>
@@ -31,6 +31,10 @@ header{
 
 .menu-layer{
   position:absolute;
+}
+
+.search-bar-layout{
+  margin:0 20px;
 }
 
 .auth-layout{

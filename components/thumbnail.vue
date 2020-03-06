@@ -1,10 +1,11 @@
 <template>
   <a :id="id" class="thumbnail-container" @click.prevent="transWatchPage(id)">
-    <div class="no-img">
+    <!-- サムネイルイメージがきちんと指定されていれば -->
+    <div class="no-img" v-if="id =! void 0">
       <p>サムネイルが存在しません</p>
     </div>
     <div class="discription-block">
-      <p>test文だよーーー</p>
+      <p>[未実装]{{description}}</p>
     </div>
   </a>
 </template>
@@ -38,19 +39,16 @@ export default {
 }
 
 .thumbnail-container > .no-img {
+  display: flex;
   width: 100%;
   height: 60%;
   overflow: hidden;
   justify-content: center;
   align-items: center;
   background-color: #eee;
+  font-size: 12px;
 }
 
-.thumbnail-container > .no-img > p {
-  width: 100%;
-  font-size: 30px;
-  text-align: center;
-}
 
 .thumbnail-container > .discription-block {
   width: 100%;

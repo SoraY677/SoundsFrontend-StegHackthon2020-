@@ -8,7 +8,7 @@
   </button>
   <!-- メニューリスト -->
   <ul ref="menuList" class="menu-list">
-    <li>新規投稿</li>
+    <li><a href="create">新規投稿</a></li>
   </ul>
   </nav>
 </template>
@@ -31,7 +31,6 @@ export default {
       else{
         mttmp.classList.add("active");
         mltmp.classList.add("active");
-
       }
     }
   }
