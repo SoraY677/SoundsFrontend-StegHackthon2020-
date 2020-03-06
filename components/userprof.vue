@@ -29,22 +29,9 @@ export default {
 }
 
 .user-prof > .detail > p.name{
-  padding-top:14px;
+  padding:14px 0 12px 0;
   font-size:1.8em;
+
 }
 
-.blue-bt{
-  display: inline;
-  padding:3px;
-  color:white;
-  background-color:#3AABD2;
-  border: 1px solid#3AABD2;
-  border-radius: 5px;
-  transition-duration: 0.3s;
-}
-.blue-bt:hover{
-  color:#3AABD2;
-  background-color: #fff;
-  border-color:#3AABD2;
-}
 </style>

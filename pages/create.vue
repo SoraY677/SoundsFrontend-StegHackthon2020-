@@ -15,7 +15,9 @@
     <h2>動画タイトル</h2>
     <textarea class="long-input" placeholder="タイトル"></textarea>
     </section>
-    <button @click="requestRecord()">登録</button>
+    <div class="regist-bt-wrapper">
+    <button class="blue-bt" @click="requestRecord()">登録</button>
+    </div>
   </main>
 </template>
 
@@ -45,6 +47,8 @@ export default {
      */
     requestRecord() {
       this.$fetchAPI(this.request,this.$store,"hoge");
+      location.href = "/user"
+
     }
   }
 };
@@ -62,5 +66,10 @@ export default {
 section.file-reader-box{
   width:100%;
   padding:20px;
+}
+
+.regist-bt-wrapper{
+  width:80%;
+  text-align: right;
 }
 </style>

@@ -47,12 +47,28 @@ main{
   padding:20px 5% 0 5%;
   overflow-x: hidden;
   overflow-y: scroll;
+  background-color:#fafafa;
 }
 
 .flex-row-block{
   display: flex;
   justify-content: space-between;
   flex-flow: wrap;
+}
+
+.blue-bt{
+  display: inline;
+  padding:8px 14px;
+  color:white;
+  background-color:#3AABD2;
+  border: 1px solid#3AABD2;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+.blue-bt:hover{
+  color:#3AABD2;
+  background-color: #fff;
+  border-color:#3AABD2;
 }
 
 </style>
