@@ -8,7 +8,7 @@
   </button>
   <!-- メニューリスト -->
   <ul ref="menuList" class="menu-list">
-    <li><a href="create">新規投稿</a></li>
+    <li><a href="/create">新規投稿</a></li>
   </ul>
   </nav>
 </template>

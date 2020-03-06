@@ -2,12 +2,13 @@
   <main>
     <mainaudio />
     <div class="flex-row-block">
-      <thumbnail />
-      <thumbnail />
-      <thumbnail />
-      <thumbnail />
-      <thumbnail />
-      <thumbnail />
+      <thumbnail :id="'hogehoge1'" :description="'[test1]'"/>
+      <thumbnail :id="'hogehoge1'" :description="'[test1]'"/>
+      <thumbnail :id="'hogehoge1'" :description="'[test1]'"/>
+      <thumbnail :id="'hogehoge1'" :description="'[test1]'"/>
+      <thumbnail :id="'hogehoge1'" :description="'[test1]'"/>
+      <thumbnail :id="'hogehoge1'" :description="'[test1]'"/>
+      <thumbnail :id="'hogehoge1'" :description="'[test1]'"/>
     </div>
   </main>
   </template>

@@ -1,26 +1,21 @@
 <template>
   <a :id="id" class="thumbnail-container" @click.prevent="transWatchPage(id)">
     <!-- サムネイルイメージがきちんと指定されていれば -->
-    <div class="no-img" v-if="id =! void 0">
+    <div class="no-img" v-if="id != void 0">
       <p>サムネイルが存在しません</p>
     </div>
     <div class="discription-block">
-      <p>[未実装]{{description}}</p>
+      <p>{{description}}</p>
     </div>
   </a>
 </template>
 
 <script>
 export default {
-  props: ["id", "thumbnailImg", "sound", "description"],
+  props: ["id", /*"thumbnailImg", "sound",*/ "description"],
   methods: {
-    transWatchPage(id) {
-      
-      /*this.$store.dispatch(
-        "getData",
-        "https://fast-headland-23842.herokuapp.com/current?num=2"
-      );*/
-      location.href = "./watch?id="+id;
+    transWatchPage() {
+      location.href = "./watch?id="+this.id;
     }
   }
 };

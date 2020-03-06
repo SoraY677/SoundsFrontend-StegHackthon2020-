@@ -26,6 +26,11 @@ html {
   padding:0;
 }
 
+p{
+  padding:0;
+  margin:0;
+}
+
 .frame{
   position:relative;
   height:100vh;
