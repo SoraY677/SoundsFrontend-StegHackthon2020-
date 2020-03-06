@@ -38,6 +38,7 @@ export default {
 .auth-box {
   position: absolute;
   display: flex;
+  z-index: 100;
   top: 120%;
   padding: 20px;
   justify-content: space-around;

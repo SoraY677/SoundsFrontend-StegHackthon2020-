@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <draganddrop :category="'sounds'" @sounds="setData($event, sound)" />
     <draganddrop
       :category="'thumbnail'"
@@ -7,7 +7,7 @@
     />
     <textarea placeholder="タイトル"></textarea>
     <button @click="requestRecord()">登録</button>
-  </div>
+  </main>
 </template>
 
 <script>

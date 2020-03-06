@@ -1,6 +1,7 @@
 <template>
   <header>
     <mmenu class="menu-layer"/>
+    <logo />
     <searchbar class="search-bar-layout"/>
     <auth class="auth-layout"/>
   </header>
@@ -10,12 +11,14 @@
 import searchbar from "~/components/searchbar"
 import mmenu from "~/layouts/menu"
 import auth from "~/layouts/auth"
+import logo from "~/components/logo"
 
 export default {
   components:{
     searchbar,
     mmenu,
-    auth
+    auth,
+    logo
   }
 }
 </script>

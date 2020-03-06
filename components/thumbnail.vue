@@ -1,7 +1,7 @@
 <template>
   <a :id="id" class="thumbnail-container" @click.prevent="transWatchPage(id)">
     <!-- サムネイルイメージがきちんと指定されていれば -->
-    <div class="no-img" v-if="id != void 0">
+    <div class="no-img" v-if="thumbnailImg === void 0">
       <p>サムネイルが存在しません</p>
     </div>
     <div class="discription-block">
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props: ["id", /*"thumbnailImg", "sound",*/ "description"],
+  props: ["id", "thumbnailImg", "sound", "description"],
   methods: {
     transWatchPage() {
       location.href = "./watch?id="+this.id;
