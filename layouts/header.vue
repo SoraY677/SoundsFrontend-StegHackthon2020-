@@ -2,18 +2,20 @@
   <header>
     <mmenu class="menu-layer"/>
     <searchbar class="center-box"/>
+    <auth class="auth-layout"/>
   </header>
 </template>
 
 <script>
 import searchbar from "~/components/searchbar"
 import mmenu from "~/layouts/menu"
+import auth from "~/layouts/auth"
 
 export default {
   components:{
     searchbar,
-    mmenu
-    
+    mmenu,
+    auth
   }
 }
 </script>
@@ -29,6 +31,10 @@ header{
 
 .menu-layer{
   position:absolute;
+}
+
+.auth-layout{
+  float:right;
 }
 
 </style>
