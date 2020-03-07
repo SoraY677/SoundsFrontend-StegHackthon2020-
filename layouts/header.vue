@@ -23,10 +23,10 @@ export default {
      */
     transAuth(){
       if(this.$store.state.auth ===""){//認証前
-        location.href = "./auth"
+        location.href = "/auth"
       }
       else{
-        location.href = "./user?id=hgoehoge";
+        location.href = "/user?id=hgoehoge";
       }
     }
   }
