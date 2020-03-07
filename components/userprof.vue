@@ -1,5 +1,6 @@
 <template>
   <div class="user-prof">
+    <div class="right-layout"><a class="blue-bt" @click="logout()">ログアウト</a></div>
     <div class="icon-wrapper">
     <img :src="url" />
     </div>
@@ -13,7 +14,13 @@
 
 <script>
 export default {
-  props: ["url"]
+  props: ["url"],
+  methods:{
+    logout(){
+      this.$store.commit('resetAuth')
+      location.href="/"
+    }
+  }
 };
 </script>
 
@@ -31,7 +38,6 @@ export default {
 .user-prof > .detail > p.name{
   padding:14px 0 12px 0;
   font-size:1.8em;
-
 }
 
 </style>

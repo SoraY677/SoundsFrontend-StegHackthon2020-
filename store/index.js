@@ -1,18 +1,18 @@
-import axios from 'axios'
+import axios from "axios";
 
 export const state = () => ({
-  data : {}
-})
+  auth: "",
+  data: {}
+});
 
 export const mutations = {
-  setData (state, data) {
+  setAuth(state, id) {
+    state.auth = id;
+  },
+  resetAuth(state) {
+    state.auth = "";
+  },
+  setData(state, data) {
     state.data = data;
   }
-}
-
-export const actions = {
-  async getData ({commit},path) {
-    const res = await this.$axios.$get(path)
-    commit("setData", res)
-  }
-}
+};
