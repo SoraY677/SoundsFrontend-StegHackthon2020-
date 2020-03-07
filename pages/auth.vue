@@ -2,8 +2,8 @@
   <main class="flex-row-block">
     <section class="auth-box">
       <h1>ユーザ認証</h1>
-      <input ref="username" class="wide-box little-round">
-      <input ref="userpass" class="wide-box little-round">
+      <input type="text" ref="username" class="wide-box little-round">
+      <input type="password" ref="userpass" class="wide-box little-round">
       <div class="right-layout little-round">
       <button class="blue-bt" @click="auth()">認証</button>
       </div>
@@ -62,6 +62,7 @@ export default {
   width:85%;
   height:2em;
   margin:3em auto;
+  border:1px solid #2e2e2e;
 }
 
 .right-layout{
