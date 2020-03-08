@@ -1,12 +1,12 @@
 <template>
   <div class="seekbar">
     <audio ref="audioController"></audio>
-    <button class="audio-icon-bt" @click="changeSoundState()">
-      <span ref="audioIcon" class="triangle"></span>
-    </button>
     <div ref="seekbarContainer" class="seekbar-container">
       <div ref="seekbarElapse" class="seekbar-elapse"></div>
     </div>
+    <button class="audio-icon-bt" @click="changeSoundState()">
+      <span ref="audioIcon" class="triangle"></span>
+    </button>
   </div>
 </template>
 
@@ -46,7 +46,8 @@ export default {
      */
     moveSeekbar: function(e){
       const percent = e.offsetX / this.$refs.seekbarContainer.clientWidth;
-      this.audio.currentTime = this.audio.duration * percent
+      this.audio.currentTime = this.audio.duration * percent;
+      this.calcSeekbarPercent();
     }
     ,
     /**
@@ -119,10 +120,10 @@ audio {
 
 .seekbar-container {
   display: inline-block;
-  width: 90%;
-  height: 70%;
-  margin-left:2%;
+  width: 100%;
+  height: 50%;
   background-color: #eee;
+  border: 1px solid #aaa;
 }
 
 .seekbar-elapse {
