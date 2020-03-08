@@ -1,7 +1,7 @@
 <template>
   <main class="flex-row-block">
     <section class="auth-box">
-      <h1>ユーザ認証</h1>
+      <h1>ログイン</h1>
       <input type="text" ref="username" class="wide-box little-round" placeholder="ユーザ名">
       <input type="password" ref="userpass" class="wide-box little-round" placeholder="パスワード">
       <div class="right-layout little-round">

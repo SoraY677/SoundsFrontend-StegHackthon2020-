@@ -1,14 +1,12 @@
 <template>
   <main>
     <userprof />
-    <ul class="video flex-row-block">
-      <li><thumbnail /></li>
-      <li><thumbnail /></li>
-      <li><thumbnail /></li>
-      <li><thumbnail /></li>
-      <li><thumbnail /></li>
-      <li><thumbnail /></li>
-    </ul>
+    <div class="flex-row-block">
+    <thumbnail :id="'hogehoge1'" :description="'焚火の音'" :thumbnailImg ="'1.jpg'"/>
+    <thumbnail :id="'hogehoge2'" :description="'スライム'" :thumbnailImg ="'2.jpg'"/>
+    <thumbnail :id="'hogehoge3'" :description="'マグロ解体ショー'" :thumbnailImg ="'3.jpg'"/>
+    <thumbnail :id="'hogehoge4'" :description="'海の音'" :thumbnailImg ="'4.jpg'"/>
+    </div>
   </main>
 </template>
 
@@ -25,9 +23,4 @@ export default {
 </script>
 
 <style>
-
-ul.video{
-  margin-top:20px;
-}
-
 </style>

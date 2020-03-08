@@ -58,7 +58,7 @@ main {
 }
 
 .blue-bt {
-  display: inline;
+  display: inline-block;
   padding: 8px 14px;
   color: white;
   background-color: #3aabd2;

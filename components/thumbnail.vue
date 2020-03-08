@@ -1,8 +1,11 @@
 <template>
   <a :id="id" class="thumbnail-container" @click.prevent="transWatchPage(id)">
-    <!-- サムネイルイメージがきちんと指定されていれば -->
-    <div class="no-img" v-if="thumbnailImg === void 0">
-      <p>サムネイルが存在しません</p>
+    <div class="img-frame">
+      <!-- サムネイルイメージの指定がない場合は文字を表示 -->
+      <p v-if="thumbnailImg === void 0">サムネイルが存在しません</p>
+      <!-- サムネイルイメージがきちんと指定されていれば画像を表示 -->
+      <img v-if="thumbnailImg != void 0" :src="require('~/assets/'+thumbnailImg)">
+      
     </div>
     <div class="discription-block">
       <p>{{ description }}</p>
@@ -24,16 +27,13 @@ export default {
 <style>
 .thumbnail-container {
   display: block;
+  width:30%;
   min-width: 360px;
   height: 40vh;
   margin: 20px;
   box-shadow: 2px 2px 5px 5px #eee;
 }
-
-.thumbnail-container > img {
-}
-
-.thumbnail-container > .no-img {
+.thumbnail-container > .img-frame {
   display: flex;
   width: 100%;
   height: 60%;
@@ -43,6 +43,10 @@ export default {
   align-items: center;
   background-color: #eee;
   font-size: 12px;
+}
+
+.thumbnail-container > .img-frame > img{
+  width:100%;
 }
 
 .thumbnail-container > .discription-block {
