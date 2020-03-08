@@ -13,9 +13,16 @@ export default {
 <style>
   .logo-layout{
     height:100%;
+    width:auto;
   }
  .logo-layout > img{
-   height:100%;
 
+   height:inherit;
+ }
+
+ @media screen and (max-width: 640px){
+   .logo-layout{
+     height:75%;
+   }
  }
 </style>

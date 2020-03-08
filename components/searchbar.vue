@@ -24,8 +24,9 @@ export default {
     justify-content: space-around;
     margin:0%
   }
-  textarea.search-input{
-    width:26em;
+  input.search-input{
+    display: block;
+    width:13em;
     height:100%;
     margin-right:10px;
     font-size:1.2em;
@@ -38,5 +39,12 @@ export default {
     color:white;
     background-color:#3AABD2;
     border:none;
+  }
+
+  @media screen and (max-width: 640px){
+    input.search-input{
+      width:9em;
+      font-size:0.8em;
+    }
   }
 </style>

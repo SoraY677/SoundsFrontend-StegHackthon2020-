@@ -28,9 +28,9 @@ export default {
 .thumbnail-container {
   display: block;
   width:30%;
-  min-width: 360px;
+  min-width:120px;
+  margin:1.5%;
   height: 40vh;
-  margin: 20px;
   box-shadow: 2px 2px 5px 5px #eee;
 }
 .thumbnail-container > .img-frame {
@@ -53,4 +53,19 @@ export default {
   width: 100%;
   height: 40%;
 }
+
+@media screen and (max-width: 1000px){
+  .thumbnail-container{
+    width:45%;
+    margin:2%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .thumbnail-container{
+    width:90%;
+    margin:5%;
+  }
+}
+
 </style>

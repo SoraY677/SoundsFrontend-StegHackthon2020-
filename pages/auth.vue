@@ -44,7 +44,7 @@ export default {
 
 <style>
 .auth-box{
-  min-width:500px;
+  width:60%;
   padding:30px;
   margin:auto;
   border-radius:20px;

@@ -34,11 +34,13 @@ header{
 }
 
 .search-bar-layout{
-  margin:0 180px;
+  margin:0 5%;
 }
 
 .auth-layout{
   float:right;
 }
+
+
 
 </style>
