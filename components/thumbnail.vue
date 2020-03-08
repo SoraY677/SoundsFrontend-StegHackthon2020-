@@ -52,6 +52,7 @@ export default {
 .thumbnail-container > .discription-block {
   width: 100%;
   height: 40%;
+  padding:0.4em;
 }
 
 @media screen and (max-width: 1000px){
