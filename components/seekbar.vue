@@ -4,7 +4,7 @@
     <button class="audio-icon-bt" @click="changeSoundState()">
       <span ref="audioIcon" class="triangle"></span>
     </button>
-    <div class="seekbar-container">
+    <div ref="seekbarContainer" class="seekbar-container">
       <div ref="seekbarElapse" class="seekbar-elapse"></div>
     </div>
   </div>
@@ -29,15 +29,26 @@ export default {
       this.$refs.audioIcon.classList.remove("double-line")
       this.$refs.audioIcon.classList.add("triangle")
     });
+
+    this.$refs.seekbarContainer.addEventListener("click",this.moveSeekbar)
+    
   },
   methods: {
     /**
-     *
+     * シークバーの進捗割合を％にし反映
      */
     calcSeekbarPercent: function() {
       const percent = (this.audio.currentTime / this.audio.duration) * 100;
       this.$refs.seekbarElapse.style.width = percent + "%";
     },
+    /**
+     * シークバーをユーザが動かした際に動かしたことを反映する。
+     */
+    moveSeekbar: function(e){
+      const percent = e.offsetX / this.$refs.seekbarContainer.clientWidth;
+      this.audio.currentTime = this.audio.duration * percent
+    }
+    ,
     /**
      * ボタンが押された際に再生/一時停止を切り替える
      *
