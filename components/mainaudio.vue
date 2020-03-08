@@ -9,7 +9,7 @@
         :src="require('~/assets/' + thumbnailImg)"
       />
     </div>
-    <audio :src="require('@/assets/fire.mp3')" controls></audio>
+    <seekbar />
     <div class="description-block">
       <h1>{{ description }}</h1>
     </div>
@@ -17,8 +17,12 @@
 </template>
 
 <script>
+import seekbar from "~/components/seekbar"
 export default {
-  props: ["id", "thumbnailImg", "sound", "description"]
+  props: ["id", "thumbnailImg", "sound", "description"],
+  components:{
+    seekbar
+  }
 };
 </script>
 
